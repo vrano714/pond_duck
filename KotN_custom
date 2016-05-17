@@ -1,0 +1,23 @@
+swim(0)
+while(true){
+deg_count = 0;
+  while (deg_count <= 360) {
+    scan_result = scan(deg_count);
+    if (scan_result <= 70) {
+      cannon(deg_count, scan_result);
+    }
+    deg_count = (typeof deg_count == 'number' ? deg_count : 0) + 5;
+  }
+  
+  if (loc_x() == 0) {
+    swim(30);
+  } else if (loc_x() == 100) {
+    swim(195);
+  } else if (loc_y() == 0) {
+    swim(75);
+  } else if (loc_y() == 100) {
+    swim(210);
+  } else if (speed() == 0) {
+    swim(0);
+  }
+}
