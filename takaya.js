@@ -4,8 +4,8 @@ var y;
 x = 0;
 y = 0;
 while (true) {
-  x = (typeof x == 'number' ? x : 0) + 13;
-  y = (typeof y == 'number' ? y : 0) + 7;
+  x = (typeof x == 'number' ? x : 0) + 17;
+  y = (typeof y == 'number' ? y : 0) + 9;
   if (scan(x) < 20) {
     swim(x - 180);
     cannon(x, scan(x));
