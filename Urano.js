@@ -1,3 +1,4 @@
+// 逆正接を返す(位置->角度)
 function atan2(y, x) {
   ret = 0;
   if (x > 0) {
