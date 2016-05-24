@@ -3,9 +3,22 @@ var SwimAngle = 0;
 var Going = 1;
 var Distance = 0;
 
-swim(0,50);
-
 //所定の位置まで移動
+if (loc_x() < 50 && loc_y() > 50) { //左上：黄色ポジション
+  swim(0,50);
+}
+if (loc_x() > 50 && loc_y() > 50) { //右上：黒色ポジション
+  swim(180,50);
+}
+if (loc_x() < 50 && loc_y() < 50) { //左下：緑色ポジション
+  swim(0,50);
+  SwimAngle = 180;
+}
+if (loc_x() > 50 && loc_y() < 50) { //右下：赤色ポジション
+  swim(180,50);
+  SwimAngle = 180;
+}
+
 while(LocInitiate == false) {
   if (loc_x() >= 49 && loc_x() <= 51) {
     stop();
@@ -38,4 +51,5 @@ while(true) {
       }
     }
   }
+  
 }
