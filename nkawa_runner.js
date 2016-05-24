@@ -1,6 +1,6 @@
-
-
-var lx=loc_x(),ly=loc_y(),x,y;
+var lx=loc_x();
+var ly=loc_y();
+var x,y;
 var rad =0;
 var sp ;
 var dx, dy;
@@ -25,20 +25,28 @@ function atan2(y, x) {
   return ret;
 }
 
+var count = 0;
+
 while(true){
 	sp = speed();
 	x = loc_x(); y = loc_y();
+	if(count > 0){
+		swim(rad,100);
+	  count --; continue;
+	}
 	dx = x-lx; dy = y-ly;
 	if(x  < 10 || x  > 90){ // x 方向反転
 		
 //		rad = atan2(dy,-dx);
-		rad+= 90+Math.random()*20-10;
+		rad+= 180+Math.random()*60-30;
 		swim(rad,100);
+    count = 50;		
 	}
 	if(y  < 10 || y  > 90){
 //		rad = atan2(-dy,dx);
-		rad+= 90+Math.random()*20-10;
+		rad+= 180+Math.random()*60-30;
 		swim(rad,100);
+    count = 50;		
 	}
 	swim(rad,100);
 	lx = x; ly = y;
