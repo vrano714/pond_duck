@@ -26,13 +26,13 @@ while (true) {
     swim(x - 177);
     ca(x - 117);
   }  else if (loc_y() > 95) {
-    swim(200);
+    swim(190);
   } else if (loc_x() > 95) {
-    swim(110);
+    swim(100);
   } else if (loc_y() < 5) {
-    swim(20);
+    swim(10);
   } else if (loc_x() < 5) {
-    swim(290);
+    swim(280);
   } else if (scan(y, 12) < 70) {
     swim(y - 40);
     ca(y);
